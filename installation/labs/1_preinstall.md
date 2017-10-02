@@ -1,9 +1,12 @@
 
-# Lab 1 #
+<br/>
 
-```
+
+1
+<br/>
+
+
 sudo  /sbin/sysctl vm.swappiness=1
-```
 
 <br/>
 Output
@@ -159,6 +162,17 @@ Address: 216.58.202.132
 
 <br/>
 
+CODE
+
+getent hosts
+
+Output
+127.0.0.1       localhost
+54.232.112.38   smt-ec2.susecloud.net smt-ec2
+
+
+
+
 7.
 ps -ef | grep nscd
 root      2985     1  0 17:52 ?        00:00:00 /usr/sbin/nscd
@@ -171,3 +185,14 @@ ps -ef | grep ntpd
 ntp       3944     1  0 18:32 ?        00:00:00 /usr/sbin/ntpd -p /var/run/ntp/ntpd.pid -g -u ntp:ntp -c /etc/ntp.conf
 ntp       3948  3944  0 18:32 ?        00:00:00 ntpd: asynchronous dns resolver
 ec2-user  3953  3444  0 18:32 pts/0    00:00:00 grep ntpd
+
+
+
+
+MYSQL
+
+1-
+
+sudo zypper install mysql
+
+sudo zypper install mysql-connector-java
