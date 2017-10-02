@@ -118,3 +118,28 @@ always madvise [never]
 <br/>
 
 
+5.
+<br/>
+<code> 
+sudo /sbin/ifconfig -a
+<code/>
+output
+<br/>
+eth0      Link encap:Ethernet  HWaddr 0A:FA:AD:61:89:2A
+          inet addr:172.31.23.127  Bcast:172.31.31.255  Mask:255.255.240.0
+          UP BROADCAST RUNNING MULTICAST  MTU:9000  Metric:1
+          RX packets:1097 errors:0 dropped:4 overruns:0 frame:0
+          TX packets:925 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:89457 (87.3 Kb)  TX bytes:98522 (96.2 Kb)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:2 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          
+      <br/>
+
+
