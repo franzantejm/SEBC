@@ -35,3 +35,60 @@ tmpfs   /run              tmpfs   noauto          0 0
 UUID=d8370529-62da-4755-8ac2-a253f9d864de /data01 ext4    defaults        0       2
 UUID=1ba217b2-c29d-4c48-9256-d61e09d85bb6 /data02 ext4    defaults        0       2
 <br/>
+
+3
+<br/>
+<code> 
+sudo /sbin/tune2fs -l /dev/xvdb
+<code/>
+<br/>
+
+output
+<br/>
+tune2fs 1.41.9 (22-Aug-2009)
+Filesystem volume name:   <none>
+Last mounted on:          <not available>
+Filesystem UUID:          d8370529-62da-4755-8ac2-a253f9d864de
+Filesystem magic number:  0xEF53
+Filesystem revision #:    1 (dynamic)
+Filesystem features:      has_journal ext_attr resize_inode dir_index filetype extent flex_bg sparse_super large_file huge_file uninit_bg dir_nlink extra_isize
+Filesystem flags:         signed_directory_hash
+Default mount options:    (none)
+Filesystem state:         clean
+Errors behavior:          Continue
+Filesystem OS type:       Linux
+Inode count:              6553600
+Block count:              26214400
+Reserved block count:     1310720
+Free blocks:              25755051
+Free inodes:              6553589
+First block:              0
+Block size:               4096
+Fragment size:            4096
+Reserved GDT blocks:      1017
+Blocks per group:         32768
+Fragments per group:      32768
+Inodes per group:         8192
+Inode blocks per group:   512
+Flex block group size:    16
+Filesystem created:       Mon Oct  2 13:47:44 2017
+Last mount time:          n/a
+Last write time:          Mon Oct  2 17:09:20 2017
+Mount count:              0
+Maximum mount count:      33
+Last checked:             Mon Oct  2 13:47:44 2017
+Check interval:           15552000 (6 months)
+Next check after:         Sat Mar 31 13:47:44 2018
+Lifetime writes:          1733 MB
+Reserved blocks uid:      0 (user root)
+Reserved blocks gid:      0 (group root)
+First inode:              11
+Inode size:               256
+Required extra isize:     28
+Desired extra isize:      28
+Journal inode:            8
+Default directory hash:   half_md4
+Directory Hash Seed:      b8cd1b77-0369-49a3-9aa5-79a6af6bc59a
+Journal backup:           inode blocks
+<br/>
+
