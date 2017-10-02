@@ -91,4 +91,30 @@ Default directory hash:   half_md4
 Directory Hash Seed:      b8cd1b77-0369-49a3-9aa5-79a6af6bc59a
 Journal backup:           inode blocks
 <br/>
+4.
+<br/>
+<code> 
+sudo vim /boot/grub/menu.lst
+
+<code/>
+
+output
+<br/>
+timeout 1
+title SLES11-SP4-EC2-HVM
+ kernel (hd0,0)/boot/vmlinuz-3.0.101-104-default root=/dev/hda1 disk=/dev/hda  vga=0x314   console=tty0 console=ttyS0,115200n8 multipath=off NON_PERSISTENT_DEVICE_NAMES=1 quiet showopts  transparent_hugepage = never
+ initrd (hd0,0)/boot/initrd-3.0.101-104-default
+title Failsafe_--_SLES11-SP4-EC2-HVM
+ kernel (hd0,0)/boot/vmlinuz-3.0.101-104-default root=/dev/hda1 disk=/dev/hda  vga=0x314   console=tty0 console=ttyS0,115200n8 multipath=off NON_PERSISTENT_DEVICE_NAMES=1 ide=nodma apm=off noresume edd=off powersaved=off nohz=off highres=off processsor.max+cstate=1 nomodeset x11failsafe quiet showopts
+ initrd (hd0,0)/boot/initrd-3.0.101-104-default
+
+<br/>
+
+output
+<br/>
+cat /sys/kernel/mm/transparent_hugepage/enabled
+always madvise [never]
+
+<br/>
+
 
