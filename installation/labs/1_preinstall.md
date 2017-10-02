@@ -1,12 +1,9 @@
 
-<br/>
+# Lab 1 #
 
-
-1
-<br/>
-
-
+```
 sudo  /sbin/sysctl vm.swappiness=1
+```
 
 <br/>
 Output
