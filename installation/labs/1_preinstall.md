@@ -1,3 +1,5 @@
+# CM INSTALL LAB SYSTEM CONFIGURATION CHECK
+
 1<br/>
 
 sudo  /sbin/sysctl vm.swappiness=1
@@ -101,22 +103,6 @@ title Failsafe_--_SLES11-SP4-EC2-HVM
  kernel (hd0,0)/boot/vmlinuz-3.0.101-104-default root=/dev/hda1 disk=/dev/hda  vga=0x314   console=tty0 console=ttyS0,115200n8 multipath=off NON_PERSISTENT_DEVICE_NAMES=1 ide=nodma apm=off noresume edd=off powersaved=off nohz=off highres=off processsor.max+cstate=1 nomodeset x11failsafe quiet showopts
  initrd (hd0,0)/boot/initrd-3.0.101-104-default
 
-#CM INSTALL LAB SYSTEM CONFIGURATION CHECK
-
-
-
-
-<br/>
-
-output
-<br/>
-cat /sys/kernel/mm/transparent_hugepage/enabled
-always madvise [never]
-
-<br/>
-
-
-5
 <br/>
 
 sudo /sbin/ifconfig -a
@@ -145,3 +131,146 @@ lo        Link encap:Local Loopback
  6
   <br/>
   
+
+ nslookup www.google.com
+<br/>
+ 
+ output 
+ <br/>
+ 
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+Non-authoritative answer:
+Name:   www.google.com
+Address: 216.58.202.132
+
+<br/>
+
+CODE
+
+getent hosts
+
+Output
+127.0.0.1       localhost
+54.232.112.38   smt-ec2.susecloud.net smt-ec2
+
+
+
+
+7.
+ps -ef | grep nscd
+root      2985     1  0 17:52 ?        00:00:00 /usr/sbin/nscd
+ec2-user  3888  3444  0 18:27 pts/0    00:00:00 grep nscd
+
+
+sudo /etc/init.d/ntp start
+
+ps -ef | grep ntpd
+ntp       3944     1  0 18:32 ?        00:00:00 /usr/sbin/ntpd -p /var/run/ntp/ntpd.pid -g -u ntp:ntp -c /etc/ntp.conf
+ntp       3948  3944  0 18:32 ?        00:00:00 ntpd: asynchronous dns resolver
+ec2-user  3953  3444  0 18:32 pts/0    00:00:00 grep ntpd
+
+
+
+
+
+
+#MYSQL INSTALL LAB
+
+
+
+
+ec2-user@ip-172-31-23-127:~> sudo /etc/init.d/mysql start
+Starting service MySQL
+
+#CM PATH B
+
+1
+sudo rpm -Uvh jdk-8u141-linux-x64.rpm
+
+
+Preparing...                ########################################### [100%]
+   1:jdk1.8.0_141           ########################################### [100%]
+Unpacking JAR files...
+        tools.jar...
+        plugin.jar...
+        javaws.jar...
+        deploy.jar...
+        rt.jar...
+        jsse.jar...
+        charsets.jar...
+        localedata.jar...
+/usr/sbin/alternatives not available, skip registering alternatives for java...
+2
+installed by defect
+
+3
+
+sql> create database hue  DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> DROP DATABASE hue;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> create database amon  DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> grant all on damon.* TO 'amon'@'%' IDENTIFIED BY 'amon_password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> create database rman  DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> grant all on rman.* TO 'rman'@'%' IDENTIFIED BY 'rman_password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> create database metastore  DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> grant all on metastore.* TO 'hive'@'%' IDENTIFIED BY 'hive_password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> create database sentry  DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> grant all on sentry.* TO 'sentry'@'%' IDENTIFIED BY 'sentry_password';
+Query OK, 0 rows affected (0.00 sec)
+
+
+4
+
+mysql -u root -p
+
+grant all on *.* to 'temp'@'%' identified by 'temp' with grant option;
+
+
+sudo netstat -ano | grep 7180
+
+
+
+5 INSTALL CM
+
+udo rpm -Uvh cloudera-manager-agent-5.10.0-1.cm5100.p0.85.sles11.x86_64.rpm
+warning: cloudera-manager-agent-5.10.0-1.cm5100.p0.85.sles11.x86_64.rpm: Header V4 DSA signature: NOKEY, key ID e8f86acd
+error: Failed dependencies:
+        python-psycopg2 is needed by cloudera-manager-agent-5.10.0-1.cm5100.p0.85.sles11.x86_64
+ec2-user@ip-172-31-23-127:/> sudo rpm -Uvh /home/ec2-user/python-psycopg2-2.6-2.1.x86_64.rpm
+warning: /home/ec2-user/python-psycopg2-2.6-2.1.x86_64.rpm: Header V3 DSA signature: NOKEY, key ID edf0d733
+Preparing...                ########################################### [100%]
+   1:python-psycopg2        ########################################### [100%]
+ec2-user@ip-172-31-23-127:/> sudo rpm -Uvh cloudera-manager-agent-5.10.0-1.cm5100.p0.85.sles11.x86_64.rpm
+warning: cloudera-manager-agent-5.10.0-1.cm5100.p0.85.sles11.x86_64.rpm: Header V4 DSA signature: NOKEY, key ID e8f86acd
+Preparing...                ########################################### [100%]
+   1:cloudera-manager-agent ########################################### [100%]
+ec2-user@ip-172-31-23-127:/>
+
+
+sudo /etc/init.d/cloudera-scm-server start
+Starting cloudera-scm-server:                                                                                       done
+
+ec2-user@ip-172-31-23-127:~> sudo /etc/init.d/cloudera-scm-server status
+Checking for service cloudera-scm-server                                                                            running
+
+
+
