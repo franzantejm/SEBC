@@ -65,3 +65,152 @@ Checking for file conflicts: ...................................................
 (2/4) Installing: mysql-community-libs-5.7.19-1.sles11.x86_64 ...............................[done]
 (3/4) Installing: mysql-community-client-5.7.19-1.sles11.x86_64 .............................[done]
 (4/4) Removing mariadb-client-10.0.31-29.3.1.x86_64 .........................................[done]
+
+
+
+ec2-user@ip-172-31-6-42:~/paquetes> sudo zypper install mysql-connector-java
+Refreshing service 'SMT-http_smt-ec2_susecloud_net'.
+Refreshing service 'cloud_update'.
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following 32 NEW packages are going to be installed:
+  cal10n geronimo-jta-1_1-api geronimo-specs-poms java-1_8_0-openjdk java-1_8_0-openjdk-headless
+  javapackages-tools libFLAC8 libXcomposite1 libXi6 libXrender1 libasound2 libfreebl3 libgif6
+  libjpeg8 libjson-c2 liblcms2-2 liblua5_2 libogg0 libpulse0 libsndfile1 libsoftokn3 libspeex1
+  libvorbis0 libvorbisenc2 libxslt-tools log4j lua mozilla-nss mysql-connector-java slf4j xerces-j2
+  xerces-j2-xml-apis
+
+The following 3 packages are not supported by their vendor:
+  cal10n mysql-connector-java slf4j
+
+32 new packages to install.
+Overall download size: 54.4 MiB. Already cached: 0 B. After the operation, additional 97.3 MiB will
+be used.
+Continue? [y/n/...? shows all options] (y): y
+Retrieving package xerces-j2-2.8.1-267.31.noarch             (1/32),   1.0 MiB (  1.2 MiB unpacked)
+Retrieving: xerces-j2-2.8.1-267.31.noarch.rpm ...............................................[done]
+Retrieving package libXcomposite1-0.4.4-7.53.x86_64          (2/32),   7.1 KiB ( 10.1 KiB unpacked)
+Retrieving: libXcomposite1-0.4.4-7.53.x86_64.rpm ............................................[done]
+Retrieving package libXi6-1.7.4-17.1.x86_64                  (3/32),  33.0 KiB ( 62.5 KiB unpacked)
+Retrieving: libXi6-1.7.4-17.1.x86_64.rpm ....................................................[done]
+Retrieving package libXrender1-0.9.8-7.1.x86_64              (4/32),  18.7 KiB ( 38.6 KiB unpacked)
+Retrieving: libXrender1-0.9.8-7.1.x86_64.rpm ................................................[done]
+Retrieving package libasound2-1.0.27.2-15.1.x86_64           (5/32), 336.8 KiB (  1.1 MiB unpacked)
+Retrieving: libasound2-1.0.27.2-15.1.x86_64.rpm .............................................[done]
+Retrieving package libfreebl3-3.29.5-57.1.x86_64             (6/32), 227.8 KiB (508.9 KiB unpacked)
+Retrieving: libfreebl3-3.29.5-57.1.x86_64.rpm ...............................................[done]
+Retrieving package libgif6-5.0.5-12.1.x86_64                 (7/32),  21.0 KiB ( 35.4 KiB unpacked)
+Retrieving: libgif6-5.0.5-12.1.x86_64.rpm ...................................................[done]
+Retrieving package libjpeg8-8.0.2-30.3.x86_64                (8/32), 102.0 KiB (274.0 KiB unpacked)
+Retrieving: libjpeg8-8.0.2-30.3.x86_64.rpm ..................................................[done]
+Retrieving package libjson-c2-0.11-2.22.x86_64               (9/32),  22.9 KiB ( 42.9 KiB unpacked)
+Retrieving: libjson-c2-0.11-2.22.x86_64.rpm .................................................[done]
+Retrieving package liblcms2-2-2.7-7.2.x86_64                (10/32), 130.6 KiB (346.8 KiB unpacked)
+Retrieving: liblcms2-2-2.7-7.2.x86_64.rpm ...................................................[done]
+Retrieving package liblua5_2-5.2.4-6.1.x86_64               (11/32),  86.6 KiB (203.8 KiB unpacked)
+Retrieving: liblua5_2-5.2.4-6.1.x86_64.rpm ..................................................[done]
+Retrieving package libogg0-1.3.0-9.61.x86_64                (12/32),  19.2 KiB ( 33.4 KiB unpacked)
+Retrieving: libogg0-1.3.0-9.61.x86_64.rpm ...................................................[done]
+Retrieving package libspeex1-1.1.999_1.2rc1-22.64.x86_64    (13/32),  50.6 KiB ( 98.3 KiB unpacked)
+Retrieving: libspeex1-1.1.999_1.2rc1-22.64.x86_64.rpm .......................................[done]
+Retrieving package libxslt-tools-1.1.28-16.1.x86_64         (14/32),  37.0 KiB ( 79.2 KiB unpacked)
+Retrieving: libxslt-tools-1.1.28-16.1.x86_64.rpm ............................................[done]
+Retrieving package libsoftokn3-3.29.5-57.1.x86_64           (15/32), 202.1 KiB (375.4 KiB unpacked)
+Retrieving: libsoftokn3-3.29.5-57.1.x86_64.rpm ..............................................[done]
+Retrieving package lua-5.2.4-6.1.x86_64                     (16/32),  24.8 KiB ( 35.8 KiB unpacked)
+Retrieving: lua-5.2.4-6.1.x86_64.rpm ........................................................[done]
+Retrieving package libvorbis0-1.3.3-8.23.x86_64             (17/32),  89.2 KiB (182.8 KiB unpacked)
+Retrieving: libvorbis0-1.3.3-8.23.x86_64.rpm ................................................[done]
+Retrieving package libFLAC8-1.3.0-11.1.x86_64               (18/32),  95.5 KiB (251.2 KiB unpacked)
+Retrieving: libFLAC8-1.3.0-11.1.x86_64.rpm ..................................................[done]
+Retrieving package mozilla-nss-3.29.5-57.1.x86_64           (19/32), 616.9 KiB (  1.8 MiB unpacked)
+Retrieving: mozilla-nss-3.29.5-57.1.x86_64.rpm ..............................................[done]
+Retrieving package libvorbisenc2-1.3.3-8.23.x86_64          (20/32),  99.2 KiB (  2.8 MiB unpacked)
+Retrieving: libvorbisenc2-1.3.3-8.23.x86_64.rpm .............................................[done]
+Retrieving package libsndfile1-1.0.25-35.1.x86_64           (21/32), 141.0 KiB (412.3 KiB unpacked)
+Retrieving: libsndfile1-1.0.25-35.1.x86_64.rpm ..............................................[done]
+Retrieving package libpulse0-5.0-4.1.x86_64                 (22/32), 255.8 KiB (839.8 KiB unpacked)
+Retrieving: libpulse0-5.0-4.1.x86_64.rpm ....................................................[done]
+Retrieving package javapackages-tools-2.0.1-8.1.x86_64      (23/32),  50.9 KiB (129.9 KiB unpacked)
+Retrieving: javapackages-tools-2.0.1-8.1.x86_64.rpm .........................................[done]
+Retrieving package java-1_8_0-openjdk-headless-1.8.0.144-27.5.3.x86_64
+                                                            (24/32),  48.7 MiB ( 83.9 MiB unpacked)
+Retrieving: java-1_8_0-openjdk-headless-1.8.0.144-27.5.3.x86_64.rpm ............[done (44.2 MiB/s)]
+Retrieving package java-1_8_0-openjdk-1.8.0.144-27.5.3.x86_64
+                                                            (25/32), 303.6 KiB (565.7 KiB unpacked)
+Retrieving: java-1_8_0-openjdk-1.8.0.144-27.5.3.x86_64.rpm ..................................[done]
+Retrieving package xerces-j2-xml-apis-2.8.1-267.31.noarch   (26/32), 150.2 KiB (190.5 KiB unpacked)
+Retrieving: xerces-j2-xml-apis-2.8.1-267.31.noarch.rpm ......................................[done]
+Retrieving package geronimo-specs-poms-1.2-25.1.noarch      (27/32),  17.8 KiB (103.4 KiB unpacked)
+Retrieving: geronimo-specs-poms-1.2-25.1.noarch.rpm .........................................[done]
+Retrieving package geronimo-jta-1_1-api-1.2-25.1.noarch     (28/32),  15.5 KiB ( 19.9 KiB unpacked)
+Retrieving: geronimo-jta-1_1-api-1.2-25.1.noarch.rpm ........................................[done]
+Retrieving package cal10n-0.7.4-8.618.noarch                (29/32),  29.0 KiB ( 28.1 KiB unpacked)
+Retrieving: cal10n-0.7.4-8.618.noarch.rpm ...................................................[done]
+Retrieving package log4j-1.2.15-124.470.noarch              (30/32), 351.4 KiB (394.0 KiB unpacked)
+Retrieving: log4j-1.2.15-124.470.noarch.rpm .................................................[done]
+Retrieving package slf4j-1.7.12-1.1.noarch                  (31/32), 149.2 KiB (168.7 KiB unpacked)
+Retrieving: slf4j-1.7.12-1.1.noarch.rpm .....................................................[done]
+Retrieving package mysql-connector-java-5.1.42-5.4.1.noarch
+                                                           (32/32), 1016.8 KiB (  1.3 MiB unpacked)
+Retrieving: mysql-connector-java-5.1.42-5.4.1.noarch.rpm ....................................[done]
+Checking for file conflicts: ................................................................[done]
+( 1/32) Installing: xerces-j2-2.8.1-267.31.noarch ...........................................[done]
+Additional rpm output:
+update-alternatives: using /usr/share/java/xerces-j2.jar to provide /usr/share/java/jaxp_parser_impl.jar (jaxp_parser_impl) in auto mode
+
+
+( 2/32) Installing: libXcomposite1-0.4.4-7.53.x86_64 ........................................[done]
+( 3/32) Installing: libXi6-1.7.4-17.1.x86_64 ................................................[done]
+( 4/32) Installing: libXrender1-0.9.8-7.1.x86_64 ............................................[done]
+( 5/32) Installing: libasound2-1.0.27.2-15.1.x86_64 .........................................[done]
+( 6/32) Installing: libfreebl3-3.29.5-57.1.x86_64 ...........................................[done]
+( 7/32) Installing: libgif6-5.0.5-12.1.x86_64 ...............................................[done]
+( 8/32) Installing: libjpeg8-8.0.2-30.3.x86_64 ..............................................[done]
+( 9/32) Installing: libjson-c2-0.11-2.22.x86_64 .............................................[done]
+(10/32) Installing: liblcms2-2-2.7-7.2.x86_64 ...............................................[done]
+(11/32) Installing: liblua5_2-5.2.4-6.1.x86_64 ..............................................[done]
+(12/32) Installing: libogg0-1.3.0-9.61.x86_64 ...............................................[done]
+(13/32) Installing: libspeex1-1.1.999_1.2rc1-22.64.x86_64 ...................................[done]
+(14/32) Installing: libxslt-tools-1.1.28-16.1.x86_64 ........................................[done]
+(15/32) Installing: libsoftokn3-3.29.5-57.1.x86_64 ..........................................[done]
+(16/32) Installing: lua-5.2.4-6.1.x86_64 ....................................................[done]
+Additional rpm output:
+update-alternatives: using /usr/bin/lua5.2 to provide /usr/bin/lua (lua) in auto mode
+
+
+(17/32) Installing: libvorbis0-1.3.3-8.23.x86_64 ............................................[done]
+(18/32) Installing: libFLAC8-1.3.0-11.1.x86_64 ..............................................[done]
+(19/32) Installing: mozilla-nss-3.29.5-57.1.x86_64 ..........................................[done]
+(20/32) Installing: libvorbisenc2-1.3.3-8.23.x86_64 .........................................[done]
+(21/32) Installing: libsndfile1-1.0.25-35.1.x86_64 ..........................................[done]
+(22/32) Installing: libpulse0-5.0-4.1.x86_64 ................................................[done]
+(23/32) Installing: javapackages-tools-2.0.1-8.1.x86_64 .....................................[done]
+(24/32) Installing: java-1_8_0-openjdk-headless-1.8.0.144-27.5.3.x86_64 .....................[done]
+Additional rpm output:
+update-alternatives: using /usr/lib64/jvm/jre-1.8.0-openjdk/bin/java to provide /usr/bin/java (java) in auto mode
+update-alternatives: using /usr/lib64/jvm/jre-1.8.0-openjdk to provide /usr/lib64/jvm/jre-openjdk (jre_openjdk) in auto mode
+update-alternatives: using /usr/lib64/jvm/jre-1.8.0-openjdk to provide /usr/lib64/jvm/jre-1.8.0 (jre_1.8.0) in auto mode
+
+
+(25/32) Installing: java-1_8_0-openjdk-1.8.0.144-27.5.3.x86_64 ..............................[done]
+(26/32) Installing: xerces-j2-xml-apis-2.8.1-267.31.noarch ..................................[done]
+Additional rpm output:
+update-alternatives: using /usr/share/java/xerces-j2-xml-apis.jar to provide /usr/share/java/xml-commons-apis.jar (xml-commons-apis) in auto mode
+
+
+(27/32) Installing: geronimo-specs-poms-1.2-25.1.noarch .....................................[done]
+(28/32) Installing: geronimo-jta-1_1-api-1.2-25.1.noarch ....................................[done]
+Additional rpm output:
+update-alternatives: using /usr/share/java/geronimo-jta-1.1-api.jar to provide /usr/share/java/jta.jar (jta) in auto mode
+update-alternatives: using /usr/share/java/geronimo-jta-1.1-api.jar to provide /usr/share/java/jta_api.jar (jta_api) in auto mode
+update-alternatives: using /usr/share/java/geronimo-jta-1.1-api.jar to provide /usr/share/java/jta_1_1_api.jar (jta_1_1_api) in auto mode
+
+
+(29/32) Installing: cal10n-0.7.4-8.618.noarch ...............................................[done]
+(30/32) Installing: log4j-1.2.15-124.470.noarch .............................................[done]
+(31/32) Installing: slf4j-1.7.12-1.1.noarch .................................................[done]
+(32/32) Installing: mysql-connector-java-5.1.42-5.4.1.noarch ................................[done]
+
