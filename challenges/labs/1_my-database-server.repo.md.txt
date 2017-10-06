@@ -214,3 +214,69 @@ update-alternatives: using /usr/share/java/geronimo-jta-1.1-api.jar to provide /
 (31/32) Installing: slf4j-1.7.12-1.1.noarch .................................................[done]
 (32/32) Installing: mysql-connector-java-5.1.42-5.4.1.noarch ................................[done]
 
+
+
+
+
+
+
+ariaDB [(none)]> create database amon DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]> grant all on amon.* TO 'amon'@'%' IDENTIFIED BY 'amon_password'                                            ;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]> create database rman DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]> grant all on rman.* TO 'rman'@'%' IDENTIFIED BY 'rman_password'                                            ;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]> create database metastore DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]> grant all on metastore.* TO 'hive'@'%' IDENTIFIED BY 'hive_pass                                            word';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]> create database sentry DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]> grant all on sentry.* TO 'sentry'@'%' IDENTIFIED BY 'sentry_password';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]> create database hue DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]> grant all on hue.* TO 'hue'@'%' IDENTIFIED BY 'sentry_password';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]> create database oozie DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]> grant all on oozie.* TO 'oozie'@'localhost' IDENTIFIED BY 'oozie_password';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]>
+
+
+MariaDB [(none)]> select @@hostname;
++-----------------+
+| @@hostname      |
++-----------------+
+| ip-172-31-12-96 |
++-----------------+
+1 row in set (0.00 sec)
+
+
+MariaDB [(none)]> select @@version;
++-----------------+
+| @@version       |
++-----------------+
+| 10.0.31-MariaDB |
++-----------------+
+1 row in set (0.00 sec)
+
+MariaDB [(none)]>
+
+
+
