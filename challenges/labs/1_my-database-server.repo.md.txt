@@ -1,0 +1,23 @@
+ec2-user@ip-172-31-4-152:~/paquetes> sudo zypper install mysql
+Refreshing service 'SMT-http_smt-ec2_susecloud_net'.
+Refreshing service 'cloud_update'.
+Loading repository data...
+Reading installed packages...
+'mysql' not found in package names. Trying capabilities.
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  mariadb
+
+1 new package to install.
+Overall download size: 8.1 MiB. Already cached: 0 B. After the operation, additional 77.7 MiB will
+be used.
+Continue? [y/n/...? shows all options] (y): y
+Retrieving package mariadb-10.0.31-29.3.1.x86_64              (1/1),   8.1 MiB ( 77.7 MiB unpacked)
+Retrieving: mariadb-10.0.31-29.3.1.x86_64.rpm ...............................................[done]
+Checking for file conflicts: ................................................................[done]
+(1/1) Installing: mariadb-10.0.31-29.3.1.x86_64 .............................................[done]
+Additional rpm output:
+usermod: no changes
+
+
