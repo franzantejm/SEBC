@@ -279,4 +279,20 @@ MariaDB [(none)]> select @@version;
 MariaDB [(none)]>
 
 
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| amon               |
+| hue                |
+| information_schema |
+| metastore          |
+| mysql              |
+| oozie              |
+| performance_schema |
+| rman               |
+| sentry             |
+| test               |
++--------------------+
+10 rows in set (0.00 sec)
 
