@@ -37,3 +37,25 @@ Creating mailbox file: File exists
 ec2-user@ip-172-31-4-152:~> sudo useradd -u 2900 -m haley
 
 
+
+
+
+
+ec2-user@ip-172-31-4-152:~> sudo usermod -g comets haley
+ec2-user@ip-172-31-4-152:~> sudo usermod -g planets saturn
+
+
+
+ec2-user@ip-172-31-4-152:~> sudo cat /etc/passwd | tail -n2
+saturn:x:2800:1001::/home/saturn:/bin/bash
+haley:x:2900:1000::/home/haley:/bin/bash
+
+
+ec2-user@ip-172-31-4-152:~> sudo cat /etc/group | tail -n2
+comets:x:1000:
+planets:x:1001:
+
+
+
+
+
