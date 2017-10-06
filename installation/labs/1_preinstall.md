@@ -1,21 +1,21 @@
 # CM INSTALL LAB SYSTEM CONFIGURATION CHECK
 
-1<br/>
+1
 
 sudo  /sbin/sysctl vm.swappiness=1
 
-<br/>
+
 Output
 vm.swappiness=1
-<br/>
+
 
 2
-<br/>
+
 
 
 cat /etc/fstab
 
-<br/>
+
 
 
 Output
@@ -32,11 +32,11 @@ UUID=1ba217b2-c29d-4c48-9256-d61e09d85bb6 /data02 ext4    defaults        0     
 <br/>
 
 3
-<br/>
+<code>
  
 sudo /sbin/tune2fs -l /dev/xvdb
 
-<br/>
+<code/>
 
 output
 <br/>
