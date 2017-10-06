@@ -21,3 +21,47 @@ Additional rpm output:
 usermod: no changes
 
 
+
+
+
+ec2-user@ip-172-31-4-152:~/paquetes> sudo rpm --import /etc/RPM-GPG-KEY-mysql
+ec2-user@ip-172-31-4-152:~/paquetes> sudo zypper install mysql-community-client
+Refreshing service 'SMT-http_smt-ec2_susecloud_net'.
+Refreshing service 'cloud_update'.
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+Problem: mariadb-client-10.0.31-29.3.1.x86_64 conflicts with namespace:otherproviders(mysql-client) provided by mysql-community-client-5.7.19-1.sles11.x86_64
+ Solution 1: deinstallation of mariadb-client-10.0.31-29.3.1.x86_64
+ Solution 2: do not install mysql-community-client-5.7.19-1.sles11.x86_64
+
+Choose from above solutions by number or cancel [1/2/c] (c): 1
+Resolving dependencies...
+Resolving package dependencies...
+
+The following 3 NEW packages are going to be installed:
+  mysql-community-client mysql-community-common mysql-community-libs
+
+The following 2 packages are going to be REMOVED:
+  mariadb mariadb-client
+
+The following 3 packages are not supported by their vendor:
+  mysql-community-client mysql-community-common mysql-community-libs
+
+3 new packages to install, 2 to remove.
+Overall download size: 27.3 MiB. Already cached: 281.5 KiB. After the operation, additional 16.8
+MiB will be used.
+Continue? [y/n/...? shows all options] (y): y
+In cache mysql-community-common-5.7.19-1.sles11.x86_64.rpm    (1/3), 281.5 KiB (  2.5 MiB unpacked)
+Retrieving package mysql-community-libs-5.7.19-1.sles11.x86_64
+                                                              (2/3),   2.2 MiB (  9.4 MiB unpacked)
+Retrieving: mysql-community-libs-5.7.19-1.sles11.x86_64.rpm .................................[done]
+Retrieving package mysql-community-client-5.7.19-1.sles11.x86_64
+                                                              (3/3),  25.1 MiB (105.8 MiB unpacked)
+Retrieving: mysql-community-client-5.7.19-1.sles11.x86_64.rpm ..................[done (14.7 MiB/s)]
+Checking for file conflicts: ................................................................[done]
+(1/4) Installing: mysql-community-common-5.7.19-1.sles11.x86_64 .............................[done]
+(2/4) Installing: mysql-community-libs-5.7.19-1.sles11.x86_64 ...............................[done]
+(3/4) Installing: mysql-community-client-5.7.19-1.sles11.x86_64 .............................[done]
+(4/4) Removing mariadb-client-10.0.31-29.3.1.x86_64 .........................................[done]
