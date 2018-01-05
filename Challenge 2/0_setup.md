@@ -63,7 +63,7 @@ tmpfs          tmpfs     3.0G     0  3.0G   0% /run/user/1000
 List the command and output for yum repolist enabled
 
 ```
-[ec2-user@ip-172-31-3-219 ~]$ yum repo list enabled
+[ec2-user@ip-172-31-14-139 ~]$ yum repo list enabled
 Loaded plugins: amazon-id, rhui-lb, search-disabled-repos
 Repo rhui-REGION-client-config-server-7 forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt
 Repo rhui-REGION-client-config-server-7 forced skip_if_unavailable=True due to: /etc/pki/rhui/product/rhui-client-config-server-7.crt
@@ -75,18 +75,18 @@ Repo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /
 Repo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/product/content-rhel7.crt
 Repo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/content-rhel7.key
 No such command: repo. Please use /usr/bin/yum --help
-[ec2-user@ip-172-31-3-219 ~]$
+
 
 
 ```
 
 
 
-List the file system capacity for the first node
+List the /etc/passwd entries for saturn and haley
 
 
   ```
-[ec2-user@ip-172-31-3-219 ~]$ sudo cat /etc/passwd | grep 'haley\|saturn'
+[ec2-user@ip-172-31-14-139 ~]$ sudo cat /etc/passwd | grep 'haley\|saturn'
 saturn:x:2800:2800::/home/saturn:/bin/bash
 haley:x:2900:2900::/home/haley:/bin/bash
 
@@ -98,7 +98,7 @@ List the /etc/group entries for comets and planets
 
 ```
 
-[ec2-user@ip-172-31-3-219 ~]$ sudo cat /etc/group | grep 'planets\|comets'
+[ec2-user@ip-172-31-14-139 ~]$ sudo cat /etc/group | grep 'planets\|comets'
 planets:x:2901:saturn
 comets:x:2902:haley
 
