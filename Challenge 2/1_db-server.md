@@ -3,25 +3,27 @@ A command and output that shows the hostname of your database server
 ```
 
 mysql> select @@hostname;
-+--------------------------------------------+
-| @@hostname                                 |
-+--------------------------------------------+
-| ip-172-31-3-219.us-west-2.compute.internal |
-+--------------------------------------------+
++---------------------------------------------+
+| @@hostname                                  |
++---------------------------------------------+
+| ip-172-31-14-139.us-west-2.compute.internal |
++---------------------------------------------+
 1 row in set (0.00 sec)
+
 
 
 ```
 A command and output that reports the database server version
 
 ```
-mysql> SELECT @@VERSION;
+mysql> select @@version;
 +-----------+
-| @@VERSION |
+| @@version |
 +-----------+
 | 5.5.58    |
 +-----------+
 1 row in set (0.00 sec)
+
 
 
 
